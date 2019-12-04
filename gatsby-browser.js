@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+//Serve para importar bibliotecas externas ou fazer coisas do React
+
+import "lazysizes"
