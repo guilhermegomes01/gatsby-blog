@@ -8,3 +8,4 @@
 //Serve para importar bibliotecas externas ou fazer coisas do React
 
 import "lazysizes"
+require("prismjs/themes/prism-tomorrow.css")

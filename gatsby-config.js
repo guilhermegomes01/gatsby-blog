@@ -45,9 +45,10 @@ module.exports = {
             options: {
               maxWidth: 960,
               linkImagesToOriginal: false
-            },
+            }
           },
           `gatsby-remark-lazy-load`,
+          `gatsby-remark-prismjs`
         ],
       },
     },
