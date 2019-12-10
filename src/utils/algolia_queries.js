@@ -6,11 +6,11 @@ const postsQuery = `{
             node {
                 objectID: id
                 frontmatter {
+                    title
                     category
                     date_timestamp: date
                     date(formatString: "DD [de] MMMM [de] YYYY", locale: "pt-br")
                     description
-                    title
                 }
                 fields {
                     slug
