@@ -4,19 +4,24 @@ import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import SEO from "../components/seo"
 import * as S from "../components/Post/styled"
-import RecommendedPosts from '../components/RecommendedPosts'
+import RecommendedPosts from "../components/RecommendedPosts"
 
 const BlogPost = ({ data, pageContext }) => {
   const post = data.markdownRemark
   const next = pageContext.nextPost
   const previous = pageContext.previousPost
 
-
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} />
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+        image={post.frontmatter.image}
+      />
       <S.PostHeader>
-        <S.PostDate>{post.frontmatter.date} - {post.timeToRead} min de leitura</S.PostDate>
+        <S.PostDate>
+          {post.frontmatter.date} - {post.timeToRead} min de leitura
+        </S.PostDate>
         <S.PostTitle>{post.frontmatter.title}</S.PostTitle>
         <S.PostDescription>{post.frontmatter.description}</S.PostDescription>
       </S.PostHeader>
@@ -36,6 +41,7 @@ export const query = graphql`
         title
         description
         date(locale: "pt-br", formatString: "DD [de] MMMM [de] YYYY")
+        image
       }
       timeToRead
     }

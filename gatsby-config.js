@@ -7,8 +7,10 @@ module.exports = {
     position: `Desenvolvedor Front-end`,
     description: `A blog about frontend development and other cool stuff.`,
     author: `Guilherme Gomes`,
+    siteUrl: `https://guilhermegomes01.github.br`
   },
   plugins: [
+    `gatsby-plugin-transition-link`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     //Precisa ser a primeira configuração para funcionar com o gatsby-remark-images 
@@ -82,6 +84,6 @@ module.exports = {
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }
