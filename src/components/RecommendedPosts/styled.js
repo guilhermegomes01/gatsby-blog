@@ -1,5 +1,6 @@
 import styled from "styled-components"
-import { Link } from "gatsby"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import media from 'styled-media-query'
 
 export const RecommendedWrapper = styled.section`
   border-bottom: 1px solid var(--borders);
@@ -8,7 +9,7 @@ export const RecommendedWrapper = styled.section`
   display: flex;
 `
 
-export const RecommendedLink = styled(Link)`
+export const RecommendedLink = styled(AniLink)`
   align-items: center;
   background: var(--mediumBackground);
   color: var(--highlight);
@@ -34,4 +35,10 @@ export const RecommendedLink = styled(Link)`
     content: "\\2192";
     margin-left: 0.5rem;
   }
+
+  ${media.lessThan("large")`
+      font-size: .9rem;
+      padding: 2rem 1rem;
+      line-height: 1.3;
+  `}
 `
